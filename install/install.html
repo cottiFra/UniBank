@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniBank - Install</title>
+    <link rel="stylesheet" href="install.css">
+    <link rel="stylesheet" href="../src/variables.css?=v1">
+</head>
+<body>
+    <div class="maincontainer">
+        <header class="navbar">
+            <div class="nbcontainer">
+                <div class="logo">
+                <img src="../assets/logo lungo7.png" alt="logo Unibank">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="loginbox">
+                <div class="loginheader">
+                    <div class="logo2">
+                        <img src="../assets/logo.png" alt="logo Unibank">
+                    </div>
+                    <h2>Benvenuto!</h2>
+                    <p>Installa la WebApp Unibank</p>
+                </div>
+                <form action="install.php" method="POST">
+                    <div class="inputbox">
+                        <label for="nomedatabase">Nome Database</label>
+                        <input type="text" name="nomedatabase" placeholder="es. UniBankDB" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" placeholder="es. root" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="indirizzo">Indirizzo Server</label>
+                        <input type="text" name="indirizzo" placeholder="es. localhost" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="password">Password DataBase</label>
+                        <input type="password" name="password" placeholder="●●●●●●">
+                    </div>
+                    <button class="loginbtn" type="submit">Installa</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="ftcontainer">
+                <div class="ftcolumn">
+                    <h2>Pages</h2>
+                    <ul>
+                        <li>
+                            <a href="../src/authentication/frontend/login.php">Login</a>
+                        </li>
+                        <li>
+                            <a href="../src/authentication/frontend/signup.php">Registrazione</a>
+                        </li>
+                        <li>
+                            <a href="../src/index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="install.html">Installazione</a>
+                        </li>
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#">Cerca Materiale</a>
+                        </li>
+                        <li>
+                            <a href="#">Profilo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ftcolumn">
+                    <h2>Manca la tua università o la tua facoltà?</h2>
+                    <a href="#"><button class="contactbtn">Contattaci</button></a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 UniBank™. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

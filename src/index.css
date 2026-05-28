@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+.logo {
+    width: 180px;
+    margin: 10px;
+    margin-left: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo img {
+    width: 80%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nbcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 10px;
+    background-color: var(--color-blue-background);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+}
+
+.nbcontainer.no-shadow {
+    box-shadow: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 100px;
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li a {
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-grey-foreground);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 5px;
+    margin: 0px 10px;
+    transition: all 0.3s ease;
+}
+
+.listelement::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    border-radius: 10px;
+    background-color: var(--color-yellow-primary);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.listelement:hover::after {
+    transform: scaleX(1);
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hpheader {
+    background-color: var(--color-blue-background);
+    width: 100%;
+    height: fit-content;
+}
+
+.loginbtn {
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-yellow-primary);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-yellow-primary);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.signupbtn {
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-yellow-primary);
+    cursor: pointer;
+    color: var(--color-blue-background);
+    background-color: var(--color-yellow-primary);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.loginbtn:hover {
+    border-radius: 8px;
+    background-color: var(--color-yellow-secondary);
+    color: var(--color-blue-background);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.signupbtn:hover {
+    border-radius: 8px;
+    background-color: var(--color-yellow-secondary);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.startbtn {
+    padding: 12px 32px;
+    border-radius: 5px;
+    border: 1px solid var(--color-yellow-primary);
+    cursor: pointer;
+    color: var(--color-blue-background);
+    background-color: var(--color-yellow-primary);
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.sfogliabtn {
+    padding: 12px 32px;
+    border-radius: 5px;
+    border: 1px solid var(--color-yellow-primary);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-yellow-primary);
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.startbtn:hover {
+    border-radius: 10px;
+    background-color: var(--color-yellow-secondary);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.sfogliabtn:hover {
+    border-radius: 10px;
+    background-color: var(--color-yellow-secondary);
+    color: var(--color-blue-background);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.btnbox {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.hpheadercontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 85px 100px 40px;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.textbox h1 {
+    font-size: 40px;
+}
+
+.textbox p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.textbox {
+    width: 425px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+    gap: 20px;
+}
+
+.textbox h1 {
+    color: var(--color-grey-background);
+}
+
+.textbox h1 span {
+    color: var(--color-yellow-primary);
+}
+
+.textbox p {
+    color: var(--color-grey-foreground);
+}
+
+.headerdispense {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hddispensabox {
+    padding: 15px 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px
+}
+
+.hdnomedispensa {
+    color: var(--color-grey-foreground);
+    font-weight: 600;
+}
+
+.hdprezzodispensa {
+    color: var(--color-yellow-primary);
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ut {
+    width: 19px;
+}
+
+.hero {
+    background-color: var(--color-grey-background);
+    display: flex;
+    padding: 30px 60px;
+    width: 100%;
+    height: fit-content;
+}
+
+.herocontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dispenserecenti h2 {
+    color: var(--color-blue-background);
+}
+
+.dispenserecenti {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.veditutte {
+    text-decoration: none;
+    color: var(--color-yellow-primary);
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.veditutte:hover {
+    text-decoration: underline;
+    font-size: 15.3px;
+}
+
+.herodispense {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hrdispensabox {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dbtextbox {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.dbdocument {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.dbnomedispensa {
+    color: var(--color-blue-background);
+    font-weight: 800;
+}
+
+.dbcorso {
+    font-weight: 550;
+}
+
+.dbuniversita {
+    font-weight: 475;
+}
+
+.dbuser {
+    color: var(--color-yellow-primary);
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.dbbuyfield {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.dbprezzodispensa {
+    color: var(--color-yellow-primary);
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dbbuyfield form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.likebtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.likeborder {
+    width: 20px;
+    position: absolute;
+}
+
+.like {
+    width: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.likebtn:hover .like {
+    opacity: 0.5;
+}
+
+.likebtn:hover .likeborder {
+    opacity: 0;
+}
+
+.likebtn.active .like {
+    opacity: 1;
+}
+
+.likebtn.active .likeborder {
+    opacity: 0;
+}
+
+.likebtn:active .like {
+    transform: scale(1.2);
+}
+
+.buybtn {
+    background-color: var(--color-blue-background);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.buybtn:hover {
+    border-radius: 10px;
+    background-color: #2d3f80;
+}
+
+.profileicon {
+    width: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.profileicon img {
+    width: 100%;
+}
+
+.urnamep {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-yellow-primary);
+}
+
+.userpopup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    background-color: var(--color-grey-background);
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    right: 9%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.uppfavatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd45c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1b2a5e;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.visprofilebtn {
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: rgba(0, 255, 0, 0.3);
+    cursor: pointer;
+    color: green;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.visprofilebtn:hover {
+    background-color: rgba(0, 255, 0, 0.45);
+    border-radius: 10px;
+    color: #006c00;
+}
+
+.logoutbtn {
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.15);
+    cursor: pointer;
+    color: #c20000;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logoutbtn:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+    border-radius: 10px;
+    color: #de0000;
+}
+
+.userpopup span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userpopup span img {
+    width: 15px;
+}
+
+.profileicon:hover+.userpopup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.userpopup:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mioprofile {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-yellow-primary);
+}
+
+.mioprofile:hover {
+    text-decoration: underline;
+    color: var(--color-yellow-primary);
+}
+
+footer {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--color-blue-background);
+    padding: 40px;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #f0b429;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.ftcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactbtn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--color-yellow-primary);
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    color: #f0b429;
+    transition: 0.3s ease;
+}
+
+.ftcolumn h2 {
+    color: #ecedf0;
+    margin-bottom: 15px;
+}
+
+.contactbtn:hover {
+    background-color: #f0b429;
+    color: #1b2a5e;
+}
+
+.copyright {
+    color: #bebebe;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+}

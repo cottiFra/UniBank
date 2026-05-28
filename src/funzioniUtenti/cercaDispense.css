@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    background-color: var(--color-grey-background);
+}
+
+.logo {
+    width: 180px;
+    margin: 10px;
+    margin-left: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.nbcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 10px;
+    background-color: var(--color-blue-background);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+}
+
+.nbcontainer.no-shadow {
+    box-shadow: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 100px;
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li a {
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-grey-foreground);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 5px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.listelement::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    border-radius: 10px;
+    background-color: var(--color-yellow-primary);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.listelement:hover::after {
+    transform: scaleX(1);
+}
+
+.loginbtn {
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-yellow-primary);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-yellow-primary);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.signupbtn {
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid var(--color-yellow-primary);
+    cursor: pointer;
+    color: var(--color-blue-background);
+    background-color: var(--color-yellow-primary);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.loginbtn:hover {
+    border-radius: 8px;
+    background-color: var(--color-yellow-secondary);
+    color: var(--color-blue-background);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.signupbtn:hover {
+    border-radius: 8px;
+    background-color: var(--color-yellow-secondary);
+    border: 1px solid var(--color-yellow-secondary);
+}
+
+.searchpage {
+    width: 100%;
+    padding-top: 90px;
+}
+
+.hero {
+    background-color: var(--color-blue-background);
+    padding: 45px 60px 50px;
+}
+
+.herobox {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.herobox h1 {
+    color: var(--color-grey-background);
+    font-size: 38px;
+}
+
+.herobox p {
+    color: var(--color-grey-foreground);
+    line-height: 1.6;
+}
+
+.content {
+    padding: 30px 60px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filters {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filtersgrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.formgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formgroup.full {
+    grid-column: span 4;
+}
+
+.formgroup label {
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.formgroup input,
+.formgroup select {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 10px 11px;
+    outline: none;
+    color: #111827;
+    background: #fff;
+}
+
+.formgroup input:focus,
+.formgroup select:focus {
+    border-color: var(--color-blue-background);
+    box-shadow: 0 0 0 2px rgba(27, 42, 94, 0.15);
+}
+
+.filteractions {
+    display: flex;
+    gap: 10px;
+}
+
+.searchbtn,
+.resetbtn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--color-yellow-primary);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.searchbtn {
+    background-color: var(--color-yellow-primary);
+    color: var(--color-blue-background);
+}
+
+.searchbtn:hover {
+    background-color: var(--color-yellow-secondary);
+    border-color: var(--color-yellow-secondary);
+}
+
+.resetbtn {
+    background-color: transparent;
+    color: #a16207;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resetbtn:hover {
+    border-radius: 10px;
+    background-color: rgba(240, 180, 41, 0.18);
+}
+
+.resultsheader h2 {
+    color: var(--color-blue-background);
+}
+
+.dispenselist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.dispensacard {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 14px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.cardtop {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.carddocicon {
+    width: 34px;
+}
+
+.cardtop h3 {
+    color: var(--color-blue-background);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.description {
+    display: none;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.details p {
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.course {
+    font-weight: 500;
+}
+
+.university,
+.faculty {
+    font-weight: 450;
+}
+
+.cardbottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 7px;
+}
+
+.meta {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.author {
+    color: var(--color-yellow-primary);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.leftactions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    color: var(--color-yellow-primary);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+}
+
+.price img {
+    width: 16px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.likecount {
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.actions a {
+    text-decoration: none;
+}
+
+.likebtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.likeborder {
+    width: 18px;
+    position: absolute;
+}
+
+.like {
+    width: 18px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.likebtn:hover .like {
+    opacity: 0.5;
+}
+
+.likebtn:hover .likeborder {
+    opacity: 0;
+}
+
+.likebtn.active .like {
+    opacity: 1;
+}
+
+.likebtn.active .likeborder {
+    opacity: 0;
+}
+
+.buybtn {
+    background-color: var(--color-blue-background);
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.buybtn:hover {
+    border-radius: 10px;
+    background-color: #2d3f80;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup-box h3 {
+    color: var(--color-blue-background);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.popup-box p {
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.popup-box .popup-btn {
+    background-color: var(--color-blue-background);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.popup-box .popup-btn:hover {
+    background-color: #2d3f80;
+}
+
+.empty {
+    grid-column: span 3;
+    background: #fff;
+    border: 1px dashed #94a3b8;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+}
+
+.empty h3 {
+    color: var(--color-blue-background);
+    margin-bottom: 4px;
+}
+
+.empty p {
+    color: #64748b;
+}
+
+@media (max-width: 1200px) {
+    .cardtop h3 {
+        font-size: 18px;
+    }
+    .details p,
+    .author,
+    .price,
+    .likecount,
+    .buybtn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu {
+        padding-right: 24px;
+    }
+
+    .hero {
+        padding: 35px 20px 40px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .filtersgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .formgroup.full {
+        grid-column: span 2;
+    }
+
+    .dispenselist {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buybtn {
+        font-size: 14px;
+    }
+
+    .empty {
+        grid-column: span 1;
+    }
+}
