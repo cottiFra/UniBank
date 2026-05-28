@@ -59,17 +59,29 @@ If the database does not recognize the passwords, reset them directly in phpMyAd
 ## Project Structure
 UniBank/
 ├── config.php # Database configuration
+
 ├── index.php # Main entry point
+
 ├── src/ # Main application code
+
 │ ├── admin/ # Admin dashboard
+
 │ ├── authentication/ # Login/Signup
+
 │ ├── contactus/ # Contact form
+
 │ ├── profile/ # User profiles
+
 │ ├── upload/ # Material upload
+
 │ └── funzioniUtenti/ # User functions
+
 ├── database(sql)/ # SQL files
+
 ├── dispense/ # Uploaded materials
+
 ├── install/ # Installation setup
+
 └── assets/ # Images and styling
 
 
